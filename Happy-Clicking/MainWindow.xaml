@@ -1,0 +1,54 @@
+﻿<Window x:Class="Happy_Clicking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Happy_Clicking"
+        mc:Ignorable="d"
+        Title="HCv1.0" Height="130" Width="230" ResizeMode="NoResize"
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded" Closing="Window_Closing"
+        AllowsTransparency="True" Background="Transparent">
+    <Border Margin="5">
+        <Border.Effect>
+            <DropShadowEffect Color="Black"
+                              Direction="270"
+                              BlurRadius="10"
+                              ShadowDepth="3" />
+        </Border.Effect>
+        <Grid Background="White" >
+            <DockPanel>
+                <!--타이틀 영역 시작-->
+                <DockPanel Name="titleBar"
+                           DockPanel.Dock="Top"
+                           Height="32"
+                           Background="#0B3955">
+                    <TextBlock Padding="8"
+                               VerticalAlignment="Center"
+                               Text="Happy Clicking"
+                               Foreground="White"
+                               FontWeight="Bold"
+                               FontSize="16" />
+                    <Button Name="ProgramExit" Content="X" Width="25" Margin="0,0,-40,0"
+                            FontWeight="Bold" FontSize="13"
+                            VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                            Style="{StaticResource DefaultTdDButton}" Click="ProgramExit_Click"/>
+                </DockPanel>
+                <!--타이틀 영역 끝-->
+                
+                <!--내용 영역 시작-->
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                        <TextBlock Text="타이핑 테스트" VerticalAlignment="Center"/>
+                        <TextBox Margin="10,5,0,5" Width="120"/>
+                    </StackPanel>
+                    <StackPanel Name="ButtonPanel" DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                        <TextBlock Text="Made by craigHan - TdD34" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </StackPanel>
+                </DockPanel>
+                <!--내용 영역 끝-->
+                
+            </DockPanel>
+        </Grid>
+    </Border>
+</Window>
